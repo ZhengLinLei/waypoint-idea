@@ -1,0 +1,15 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+}
+b, .b{
+    font-weight: bold;
+}
+.text-muted{
+    color: var(--muted-color);
+}
+small, .small{
+    font-size: 0.7em;
+}

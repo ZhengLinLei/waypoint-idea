@@ -3,6 +3,8 @@ const hbs = require('express-handlebars');
 
 const morgan = require('morgan');
 const multer = require('multer');
+const cookieParser = require("cookie-parser");
+
 
 const express = require('express');
 const routes = require('../routes');
@@ -18,28 +20,32 @@ module.exports = app =>{
     app.set('views', path.join(__dirname, '../views')); // ABSOLUTE PATH OF THE VIEWS FOLDER
     app.set('view engine', '.hbs'); // VIEW RENDER ENGINE
 
+
+    // ------------------------
     // VIEWS ENGINE
-    app.engine('.hbs', hbs({
+    app.engine(app.get('view engine'), hbs.engine({
         defaultLayout: 'template',
         partialsDir: path.join(app.get('views'), 'partials'),
         layoutsDir: path.join(app.get('views'), 'layouts'),
-        extname: '.hbs',
+        extname: app.get('view engine'),
         helpers: require('./helpers.hbs')
     }));
 
 
     // MIDDLEWARE
-    app.use(morgan('dev')); // CHANGE IT TO ANOTHER IN PRODUCTION
+    app.use(morgan(app.get('env'))); // CHANGE IT TO ANOTHER IN PRODUCTION
     // app.use(
     //     multer({
     //         dest: path.join(__dirname, '../public/upload/temp') // PATH TO SAVE THE TEMPORAL IMAGE UPLOADED
     //     })
     //     .single('image') // NAME OF THE SINGLE FILE UPLOADED
     // );
+
     app.use(express.urlencoded({
         extended: true
     }));
     app.use(express.json());
+    app.use(cookieParser());
 
     // ROUTES
     routes(app);
@@ -53,6 +59,8 @@ module.exports = app =>{
         app.use(errorHandler)
     }
 
+
+    // ------------------------
     // RETURN ALL CONFIG TO THE MAIN FILE
     return app;
 }

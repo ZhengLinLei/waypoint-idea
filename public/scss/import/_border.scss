@@ -1,0 +1,6 @@
+$types: (top, left, right, bottom);
+@each $type in $types {
+    .border-#{$type} {
+        border-#{$type}: 1px solid #f5f5f5;
+    }
+}

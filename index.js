@@ -10,4 +10,4 @@ const app = config(express());
 
 
 // CALL SERVER
-app.listen(app.get('port') , ()=> `Port in ${app.get('port')}`);
+app.listen(app.get('port') , ()=> console.log(`Port in ${app.get('port')}`));

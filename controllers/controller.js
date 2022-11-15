@@ -6,7 +6,15 @@ const controller = {};
 
 controller.getIndex = (req, res) => {
     // INDEX PAGE
+    // if(req.cookies.welcomeSection == undefined){
+    //     res.cookie('welcomeSection', 'true', { expires: new Date(Number(new Date()) + (10 * 365 * 24 * 60 * 60 * 1000)), httpOnly: true }); // Expires in 10 years
+    //     // res.render('index', {firstTime: true});
+    //     res.send('firstTime');
+    // }else{
+    //     res.render('index');
+    // }
     res.render('index');
+
 }
 
 controller.getAddNew = (req, res) => {

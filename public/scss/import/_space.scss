@@ -1,0 +1,85 @@
+/* SPACE */
+$space: 10%;
+@for $i from 1 to 11 {
+  .w-#{$i} {
+    width: ($space * $i);
+  }
+}
+@for $i from 1 to 11 {
+  .h-#{$i} {
+    height: ($space * $i);
+  }
+}
+$spacer: 0.25em;
+@for $i from 0 to 6 {
+  .px-#{$i},
+  .pl-#{$i},
+  .p-#{$i} {
+    padding-left: ($spacer * $i) !important;
+  }
+  .px-#{$i},
+  .pr-#{$i},
+  .p-#{$i} {
+    padding-right: ($spacer * $i) !important;
+  }
+  .py-#{$i},
+  .pt-#{$i},
+  .p-#{$i} {
+    padding-top: ($spacer * $i) !important;
+  }
+  .py-#{$i},
+  .pb-#{$i},
+  .p-#{$i} {
+    padding-bottom: ($spacer * $i) !important;
+  }
+}
+@for $i from 0 to 6 {
+  .mx-#{$i},
+  .ml-#{$i},
+  .m-#{$i} {
+    margin-left: ($spacer * $i) !important;
+  }
+  .mx-#{$i},
+  .mr-#{$i},
+  .m-#{$i} {
+    margin-right: ($spacer * $i) !important;
+  }
+  .my-#{$i},
+  .mt-#{$i},
+  .m-#{$i} {
+    margin-top: ($spacer * $i) !important;
+  }
+  .my-#{$i},
+  .mb-#{$i},
+  .m-#{$i} {
+    margin-bottom: ($spacer * $i) !important;
+  }
+}
+.container {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+@media (min-width: 768px) {
+  .container {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    padding-right: 35px;
+    padding-left: 35px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    padding-right: 55px;
+    padding-left: 55px;
+  }
+}
+
+code{
+  padding: 10px 15px;
+  border-radius: 3px;
+  background: #f5f5f5;
+}

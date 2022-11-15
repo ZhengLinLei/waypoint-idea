@@ -1,0 +1,44 @@
+$types: (flex, none, block, inline-block);
+@each $type in $types {
+  .d-#{$type} {
+    display: $type;
+  }
+}
+$types: (center, space-around, space-between, flex-end, flex-start);
+@each $type in $types {
+    .justify-#{$type} {
+        justify-content: $type;
+    }
+}
+$types: (center, flex-end, flex-start);
+@each $type in $types {
+    .align-items-#{$type} {
+        align-items: $type;
+    }
+}
+.flex-column{
+    flex-direction: column;
+}
+$types: (right, center, left);
+@each $type in $types {
+    .text-#{$type} {
+        text-align: $type;
+    }
+}
+.flex-1{
+    flex: 1;
+}
+.flex-wrap{
+    flex-wrap: wrap;
+}
+//POSITION
+$types: (relative, absolute, sticky, fixed);
+@each $type in $types {
+    .po-#{$type} {
+        position: $type;
+    }
+}
+.fixed-top{
+    top: 0;
+    left: 0;
+}
