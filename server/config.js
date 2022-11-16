@@ -47,11 +47,11 @@ module.exports = app =>{
     app.use(express.json());
     app.use(cookieParser());
 
-    // ROUTES
-    routes(app);
-
     // STATIC FILES
     app.use('/static', express.static(path.join(__dirname, '../public')));
+
+    // ROUTES
+    routes(app);
 
     // ERROR HANDLER
     if('dev' === app.get('env')){

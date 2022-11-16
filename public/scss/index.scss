@@ -5,12 +5,15 @@ body{
         width: 100vw;
         height: 100vh;
         top: 0;
-        z-index: 2;
+        z-index: 3;
         height: 100vh;
         // background-color: red;
         display: none; //flex
         justify-content: center;
         overflow-y: scroll;
+        &.active{
+            display: flex;
+        }
         .data_content_list{
             width: 85vw;
             max-width: 400px;
@@ -19,12 +22,14 @@ body{
             .data_content{
                 margin: 10px 0;
                 padding: 20px;
+                height: 200px;
                 background-color: white;
             }
             
         }
     }
     .new_route_extra, .new_route_map{
+        transition: .3s ease-in-out;
         position: absolute;
         top: 65px;
         z-index: 2;
@@ -40,12 +45,21 @@ body{
             font-size: var(--icon-size);
         }
     }
+    .new_route_extra{
+        left: -100vw;
+        &.active{
+            left: 0;
+        }
+    }
     .new_route_map{
-        right: 0;
+        right: -100vw;
+        &.active{
+            right: 0;
+        }
     }
     header.search_header{
         position: fixed;
-        z-index: 3;
+        z-index: 4;
         top: 40px;
         left: 50%;
         transform: translateX(-50%);
@@ -80,7 +94,7 @@ body{
             }
         }
     }
-    main{
+    > main{
         position: fixed;
         z-index: 1;
         width: 100vw;
@@ -116,6 +130,21 @@ body{
         &.active{
             right: 0;
         }
+
+        main{
+            padding: 30px 0;
+            #layer_config{
+                .layer_list{
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-gap: 15px;
+                    img{
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
     }
     .add_favourite_s{
         left: -100%;
@@ -125,6 +154,25 @@ body{
         }
     }
     .new_route_s{
+        &#new_route_search{
+            footer.route_find{
+                position: absolute;
+                top: 80%;
+                left: 0;
+                width: 100%;
+                padding: 0 40px 70px 40px;
+                > a{
+                    width: 100%;
+                    height: 50px;
+                    background-color: #C6EBBE;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    font-size: var(--icon-size);
+                    padding: 30px 0;
+                }
+            }
+        }
         // display: none;
         width: 100vw;
         height: calc(85vh + 25px);

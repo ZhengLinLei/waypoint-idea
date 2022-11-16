@@ -2,7 +2,7 @@ module.exports = {
 
     // RETURN DATABASE ALL INFO
     database : {
-        URI : './src/server/database.db',
+        URI : './server/database.db',
         user: '',
         password: ''
     }

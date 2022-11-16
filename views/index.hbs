@@ -3,22 +3,22 @@
         <div class="search_input">
             <div class="input_group border-radius drop-shadow">
                 <form>
-                    <input type="text" type="text" placeholder="Búsqueda de sitios">
+                    <input type="text" id="search-data" placeholder="Búsqueda de sitios">
                     <a href="">
                         <ion-icon name="search-outline"></ion-icon>
                     </a>
                 </form>
             </div>
-            <div class="new_route_extra">
-                <a class="border-radius home drop-shadow">
+            <div class="new_route_extra active-route">
+                <a class="border-radius home drop-shadow" id="return-home">
                     <ion-icon name="home-outline"></ion-icon>
                 </a>
             </div>
-            <div class="new_route_map">
+            <div class="new_route_map active-route" id="locate-user">
                 <a class="border-radius locate drop-shadow">
                     <ion-icon name="locate-outline"></ion-icon>
                 </a>
-                <a class="border-radius repeat drop-shadow">
+                <a class="border-radius repeat drop-shadow" id="repeat-route">
                     <ion-icon name="repeat-outline"></ion-icon>
                 </a>
             </div>
@@ -28,16 +28,7 @@
 {{!-- Search data --}}
 <div class="search_data">
     <div class="data_content_list">
-        <div class="data_content border-radius drop-shadow">
-        </div>
-        <div class="data_content border-radius drop-shadow">
-        </div>
-        <div class="data_content border-radius drop-shadow">
-        </div>
-        <div class="data_content border-radius drop-shadow">
-        </div>
-        <div class="data_content border-radius drop-shadow">
-        </div>
+        {{!-- DATA --}}
     </div>
 </div>
 {{!-- ============ --}}
@@ -49,24 +40,42 @@
 {{!-- ============= --}}
 <div id="preference" class="preference_s drop-shadow">
     <header class="preference_back">
-        <a href="">
+        <a id="preference_back_btn">
             <ion-icon name="chevron-back-outline"></ion-icon>
         </a>
     </header>
+    <main>
+        <header id="layer_config">
+            <div class="layer_list">
+                <img src="/static/img/web/sat.png" class="border-radius map-layer" data-layer="0">
+                <img src="/static/img/web/str.png" class="border-radius map-layer" data-layer="1">
+                <img src="/static/img/web/trf.png" class="border-radius map-layer" data-layer="2">
+            </div>
+        </header>
+    </main>
 </div>
 <div id="new_route_search" class="new_route_s drop-shadow">
     <header class="route_line">
         <div class="line border-radius"></div>
     </header>
+    <footer class="route_find">
+        <a class="border-radius" id="create_route">
+            <span>CREAR RUTA</span>
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+        </a>
+    </footer>
 </div>
 <div id="new_route" class="new_route_s drop-shadow">
     <header class="route_line">
         <div class="line border-radius"></div>
     </header>
+    <main>
+        <pre><code lang="javascript" id="return-data"></code></pre>
+    </main>
 </div>
 <div id="add_favourite" class="add_favourite_s drop-shadow">
     <header class="favourite_back">
-        <a href="">
+        <a id="add_favourite_back_btn">
             <ion-icon name="chevron-back-outline"></ion-icon>
         </a>
     </header>
@@ -86,4 +95,4 @@
         </div>
     </div>
 </footer>
-<script src="/static/js/min/index.js"></script>
+<script src="/static/js/src/index.js"></script>
