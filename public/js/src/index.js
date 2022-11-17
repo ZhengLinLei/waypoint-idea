@@ -211,8 +211,8 @@ window.addEventListener('load', () => {
                 waypoints: [
                     CURRENT_LOCATION,
                     L.latLng(res[0].la,res[0].lo),
-                    L.latLng(res[1].la,res[1].lo),
-                    L.latLng(res[2].la,res[2].lo)
+                    L.latLng(res[2].la,res[2].lo),
+                    L.latLng(res[1].la,res[1].lo)
                 ],
                 routeWhileDragging: false,
                 // router: L.Routing.graphHopper('e197d1a4-153c-48d4-bfa4-422518e288e6	')
