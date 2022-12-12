@@ -1,18 +1,18 @@
 Una vez instalado ejecutar `npm install` para instalar las dependencias y `npm start` para iniciar el servidor.
 
-# 1 Abrir
+# 1 Abrir: 
 
 Accede en tu navegador con `http://localhost:3000/` y podrás ver la aplicación.
 
 
 
-Live version: [https://waypoint-qi33.onrender.com](https://waypoint-qi33.onrender.com)
+Live version: [https://waypoint-qi33.onrender.com](https://waypoint-qi33.onrender.com) Mobile version Only.
 
 La APP más chula del mundo. Ole Ole Ole
 
 
 
-Descripción:
+# 2 Descripción:
 
 Waypoint es una plataforma que ayuda al usuario a generar rutas turísticas personalizadas. Se diferencia por el hecho de que esta app es capaz de generar rutas personalizadas por el usuario y no preestablecidas. Además, posee la ventaja de usar conjuntos de algoritmos e inteligencia artificial para reducir factores no deseados,  como por ejemplo: tráfico, contaminación, aglomeración, etc.
 
