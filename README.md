@@ -16,7 +16,7 @@ La APP más chula del mundo. Ole Ole Ole
 
 ## Presentaciónes: 
 
-Accede a las presentaciónes del proyecto: [./docs/WayPoint.pdf](PDF - Proyecto)
+Accede a las presentaciónes del proyecto: [PDF - Proyecto](./docs/WayPoint.pdf)
 
 Waypoint es una plataforma que ayuda al usuario a generar rutas turísticas personalizadas. Se diferencia por el hecho de que esta app es capaz de generar rutas personalizadas por el usuario y no preestablecidas. Además, posee la ventaja de usar conjuntos de algoritmos e inteligencia artificial para reducir factores no deseados,  como por ejemplo: tráfico, contaminación, aglomeración, etc.
 
